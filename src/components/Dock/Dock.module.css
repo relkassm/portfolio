@@ -1,0 +1,32 @@
+.dock {
+  display: flex;
+  justify-content: center;
+  background: #11111199;
+  position: fixed;
+  bottom: 0.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid #4a4a4a 0.1vw;
+  border-radius: 1vw;
+}
+
+.item {
+  padding: 0.6vw;
+}
+
+.item img {
+  transform: translateY(0%);
+  transition: all .4s ease;
+  position: relative;
+  height: 3.5vw;
+}
+
+.selected img {
+  transform: scale(1.4) translateY(-50%);
+  transition: all .4s ease;
+}
+
+.sides img {
+  transform: translateY(-25%);
+  transition: all .4s ease;
+}

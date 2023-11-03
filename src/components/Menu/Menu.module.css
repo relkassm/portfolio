@@ -1,0 +1,53 @@
+.menu {
+  background: #000000;
+  padding: 0.1vw .5vw;
+  display: flex;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+}
+
+.items span {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0.3vw 0.8vw;
+  cursor: default;
+  border-radius: 0.3vw;
+}
+
+.items img {
+  height: 1.3vw;
+  padding: .2vw .6vw;
+  border-radius: 0.3vw;
+}
+
+.selected {
+  background: #262626;
+}
+
+.config {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.config span {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: default;
+  border-radius: 0.3vw;
+  margin: 0 0.5vw;
+}
+
+.config img {
+  height: 1.3vw;
+  padding: 0.2vw 0.4vw;
+  border-radius: 0.3vw;
+}

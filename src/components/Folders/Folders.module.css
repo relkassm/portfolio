@@ -1,0 +1,29 @@
+.folders {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  top: 3%;
+}
+
+.folder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0.6vw 0;
+}
+
+.folder img {
+  margin: auto;
+  width: 4vw;
+}
+
+.folder span {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0.3vw 0.8vw;
+  cursor: default;
+  border-radius: 0.3vw;
+}
