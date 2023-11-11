@@ -1,7 +1,7 @@
 import Folder from "./Folder";
 import styles from "./Folders.module.css";
 
-function Folders() {
+const Folders = ({ setTitle, clicked, setClicked }) => {
   const folders = [
     { id: 1, value: "Background" },
     { id: 2, value: "1337" },
@@ -12,10 +12,16 @@ function Folders() {
   return (
     <div className={styles.folders}>
       {folders.map((folder) => (
-        <Folder key={folder.id} name={folder.value} />
+        <Folder
+          key={folder.id}
+          name={folder.value}
+          setTitle={setTitle}
+          clicked={clicked}
+          setClicked={setClicked}
+        />
       ))}
     </div>
   );
-}
+};
 
 export default Folders;
