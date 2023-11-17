@@ -16,7 +16,8 @@
 .folder img {
   margin: auto;
   padding: 0.2vw;
-  border: solid transparent 0.1vw;
+  border: solid transparent 0.12vw;
+  border-radius: 0.3vw;
   width: 4vw;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .clicked img {
-  border: solid #484848 0.1vw;
+  border: solid #484848 0.12vw;
 }
 
 .clicked span {

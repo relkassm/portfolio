@@ -7,6 +7,8 @@ const Desktop = () => {
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState(1);
   const [clicked, setClicked] = useState("");
+  // const [window, setWindow] = useState({ title: "", content: [], priority: 0 });
+
   return (
     <>
       {title && (
