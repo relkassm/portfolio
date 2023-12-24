@@ -4,22 +4,25 @@ import Window from "./Window/Window";
 import Folders from "./Folder/Folders";
 
 const Desktop = () => {
-  const [title, setTitle] = useState("");
   const [priority, setPriority] = useState(1);
   const [clicked, setClicked] = useState("");
-  // const [window, setWindow] = useState({ title: "", content: [], priority: 0 });
+  const [window, setWindow] = useState({ title: "", content: "", priority: 0 });
 
   return (
     <>
-      {title && (
+      {window.title && (
         <Window
-          title={title}
-          setTitle={setTitle}
+          window={window}
+          setWindow={setWindow}
           priority={priority}
           setPriority={setPriority}
         />
       )}
-      <Folders setTitle={setTitle} clicked={clicked} setClicked={setClicked} />
+      <Folders
+        setWindow={setWindow}
+        clicked={clicked}
+        setClicked={setClicked}
+      />
     </>
   );
 };

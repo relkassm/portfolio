@@ -9,7 +9,7 @@ const Items = () => {
   return (
     <>
       <img
-        src="apple.png"
+        src="logo.png"
         alt="logo"
         className={selected === "logo" ? styles.selected : ""}
         onMouseEnter={() => {

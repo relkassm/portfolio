@@ -1,19 +1,25 @@
 import React from "react";
 import styles from "./Folders.module.css";
 
-function Folder({ name, setTitle, clicked, setClicked }) {
+function Folder({ title, content, setWindow, clicked, setClicked }) {
   return (
     <div
       className={
-        clicked === name
+        clicked === title
           ? `${styles.folder} ${styles.clicked}`
           : `${styles.folder}`
       }
-      onClick={() => setClicked(name)}
-      onDoubleClick={() => setTitle(name)}
+      onClick={() => setClicked(title)}
+      onDoubleClick={() =>
+        setWindow((prevWindow) => ({
+          ...prevWindow,
+          title: title,
+          content: content,
+        }))
+      }
     >
-      <img src="folder.png" alt={name} />
-      <span>{name}</span>
+      <img src="folder.png" alt={title} />
+      <span>{title}</span>
     </div>
   );
 }

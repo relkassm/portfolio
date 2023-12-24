@@ -16,12 +16,13 @@
   background: #000000;
   border-radius: 0.5vw;
   border: solid #484848 0.1vw;
+  overflow-y: auto;
 }
 
 .title {
   color: #b2b3b6;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: .8vw;
+  font-family: Montserrat;
+  font-size: 0.8vw;
   font-weight: 600;
   position: absolute;
   left: 50%;
@@ -45,4 +46,23 @@
 
 .expand {
   background: #28c840;
+}
+
+.main {
+  padding: 0.2vw;
+  font-size: 0.9vw;
+  text-align: justify;
+}
+
+.main span {
+  color: #c7c7c7;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.main strong {
+  color: #59eaec;
+  font-weight: 900;
+  margin-left: 0.7vw;
+  margin-right: 0.2vw;
 }
