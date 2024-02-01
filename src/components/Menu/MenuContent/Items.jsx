@@ -4,7 +4,7 @@ import styles from "../Menu.module.css";
 
 const Items = () => {
   const [selected, setSelected] = useState("");
-  const list = ["Finder", "File", "Edit", "View", "Go", "Window", "Help"];
+  const list = ["About", "Training", "Career", "Expertise", "Tools", "Events"];
 
   return (
     <>
