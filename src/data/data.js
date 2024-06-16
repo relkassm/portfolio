@@ -20,7 +20,6 @@ const data = [
     ],
   },
   {
-    index: 2,
     name: "1337",
     content: [
       {
@@ -41,7 +40,6 @@ const data = [
     ],
   },
   {
-    index: 3,
     name: "IM Creation",
     content: [
       {
@@ -57,6 +55,46 @@ const data = [
       {
         index: "3",
         key: "Projects",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+    ],
+  },
+  {
+    name: "Ark-x",
+    content: [
+      {
+        index: "1",
+        key: "Company",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+      {
+        index: "2",
+        key: "Role",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+      {
+        index: "3",
+        key: "Projects",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+    ],
+  },
+  {
+    name: "Projects",
+    content: [
+      {
+        index: "1",
+        key: "Project1",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+      {
+        index: "2",
+        key: "Project2",
+        val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+      },
+      {
+        index: "3",
+        key: "Project3",
         val: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
       },
     ],
