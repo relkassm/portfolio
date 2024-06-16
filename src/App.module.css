@@ -2,7 +2,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: #111111;
-  background-image: url('https://r3d4.vercel.app/background.png');
+  background-image: url("https://r3d4.vercel.app/background.png");
   background-repeat: repeat;
   background-size: 6vw;
   margin: 0;
@@ -13,4 +13,11 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
+}
+
+.noselect {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
 }

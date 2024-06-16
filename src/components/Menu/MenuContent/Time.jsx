@@ -28,15 +28,15 @@ const Time = () => {
     const minutes = now.getMinutes();
     const amOrPm = hours >= 12 ? "PM" : "AM";
     const formattedHours = hours > 12 ? hours - 12 : hours;
-    const formattedDayOfMonth = dayOfMonth < 10 ? " " + dayOfMonth : dayOfMonth; // Add a space before single-digit day
+    const formattedDayOfMonth = dayOfMonth < 10 ? " " + dayOfMonth : dayOfMonth;
     const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
     newDate = `${dayOfWeek} ${formattedDayOfMonth}. ${month} ${formattedHours}:${formattedMinutes} ${amOrPm}`;
-    date !== newDate && setDate(newDate);
+    setDate(newDate);
   };
 
   useEffect(() => {
     updateDate();
-    setInterval(updateDate, 30000);
+    setInterval(updateDate, 1000);
   });
 
   return <span>{date}</span>;
