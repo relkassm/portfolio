@@ -8,20 +8,18 @@ const Dock = () => {
   const [selected, setSelected] = useState();
   const items = [
     { id: 1, value: "c" },
-    { id: 2, value: "java" },
-    { id: 3, value: "python" },
-    { id: 4, value: "node" },
-    { id: 5, value: "react" },
-    { id: 6, value: "mysql" },
-    { id: 7, value: "mongo" },
+    { id: 2, value: "node" },
+    { id: 3, value: "react" },
+    { id: 4, value: "mongo" },
+    { id: 5, value: "mysql" },
+    { id: 6, value: "javascript" },
+    { id: 7, value: "typescript" },
     { id: 8, value: "html" },
     { id: 9, value: "css" },
-    { id: 10, value: "javascript" },
-    { id: 11, value: "typescript" },
-    { id: 12, value: "git" },
-    { id: 13, value: "docker" },
-    { id: 14, value: "wordpress" },
-    { id: 15, value: "jira" },
+    { id: 10, value: "git" },
+    { id: 11, value: "docker" },
+    { id: 12, value: "wordpress" },
+    { id: 13, value: "jira" },
   ];
 
   return (

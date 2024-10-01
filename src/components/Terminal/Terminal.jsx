@@ -9,19 +9,23 @@ import Command from "./Command";
 import Content from "./Content";
 
 const Terminal = ({ window, setWindow, focused, setFocused }) => {
-  let list = "Sections list: <br />";
-  const defaultInfo = "available commands: ls - cat - exit";
+  let list = "";
+  const defaultInfo = "available commands: ls - cd - help - exit";
+  const helpContent = `Usage: <br /><br />ls&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspList all sections in format [foo]: [bar]<br />cd [foo]&nbsp&nbsp&nbsp&nbspAccess the content of [foo] section<br />help&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspShow commandline usage<br />exit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClose the terminal`;
   const inputRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  const [reduced, setReduced] = useState(false);
   const [info, setInfo] = useState(defaultInfo);
   const [command, setCommand] = useState("");
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState({});
 
   useEffect(() => {
     setCommand("");
-    setContent("");
+    setContent({});
     setInfo(defaultInfo);
     inputRef.current.focus();
     setFocused(true);
+    setReduced(false);
   }, [window, setFocused]);
 
   const focus = (e) => {
@@ -38,6 +42,14 @@ const Terminal = ({ window, setWindow, focused, setFocused }) => {
     setCommand("");
   };
 
+  const toggleSize = () => {
+    setExpanded(!expanded);
+  };
+
+  const reduceWindow = () => {
+    setReduced(true);
+  };
+
   const executeCommand = (cmd) => {
     const folder = data.find((folder) => folder.name === window.title);
     switch (cmd) {
@@ -45,13 +57,16 @@ const Terminal = ({ window, setWindow, focused, setFocused }) => {
         folder.content.forEach((section) => {
           list += `${section.index}: ${section.key} <br />`;
         });
-        setContent(list);
+        setContent({ value: list });
+        break;
+      case "help":
+        setContent({ value: helpContent });
         break;
       case "exit":
         setWindow((prevWindow) => ({ ...prevWindow, title: "" }));
         break;
       default:
-        if (cmd.startsWith("cat ")) {
+        if (cmd.startsWith("cd ")) {
           const param = cmd.split(" ")[1];
           const section = folder.content.find(
             (section) =>
@@ -59,25 +74,28 @@ const Terminal = ({ window, setWindow, focused, setFocused }) => {
               param.toLowerCase() === section.key.toLowerCase()
           );
           if (section) {
-            console.log(param);
-            console.log(folder.content);
-            setContent(section.val);
+            setContent(section);
           } else {
-            setContent("Section not found");
+            setContent({ value: "Section not found" });
           }
         } else {
-          setContent("Command not found");
+          setContent({ value: "Command not found" });
         }
         break;
     }
   };
 
   const formatCommand = (cmd) => {
-    return cmd.replace(/ /g, "\u00a0"); // Replace spaces with non-breaking spaces
+    return cmd.replace(/ /g, "\u00a0");
   };
 
   return (
-    <div className={styles.window} onClick={focus}>
+    <div
+      className={`${styles.window} ${expanded && styles.expanded} ${
+        reduced && styles.reduced
+      }`}
+      onClick={focus}
+    >
       <div className={styles.nav}>
         <div
           className={`${styles.round} ${
@@ -91,11 +109,13 @@ const Terminal = ({ window, setWindow, focused, setFocused }) => {
           className={`${styles.round} ${
             focused ? styles.reduce : styles.blurred
           }`}
+          onClick={reduceWindow}
         ></div>
         <div
           className={`${styles.round} ${
             focused ? styles.expand : styles.blurred
           }`}
+          onClick={toggleSize}
         ></div>
         <h2 className={styles.title}>{window.title}</h2>
       </div>

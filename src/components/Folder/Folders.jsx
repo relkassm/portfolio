@@ -7,7 +7,6 @@ const Folders = ({ setWindow, clicked, setClicked }) => {
     { id: 2, title: "1337", content: "1337" },
     { id: 3, title: "IM Creation", content: "IM Creation" },
     { id: 4, title: "Ark-x", content: "Ark-x" },
-    { id: 5, title: "Projects", content: "Projects" },
   ];
   return (
     <div className={styles.folders}>

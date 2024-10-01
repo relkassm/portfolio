@@ -7,16 +7,26 @@
 }
 
 .window {
-  height: 30vw;
+  height: 50vh;
   width: 40vw;
   position: fixed;
   left: 50%;
   top: 40%;
   transform: translateX(-50%) translateY(-35%);
-  background: #1e1e1e;
+  background: #000000;
   border-radius: 0.5vw;
   border: solid #484848 0.1vw;
-  overflow-y: auto;
+  transition: height 0.3s ease, width 0.3s ease, top 0.3s ease;
+}
+
+.expanded {
+  height: 70vh;
+  width: 60vw;
+}
+
+.reduced {
+  top: 150%;
+  width: 0;
 }
 
 .title {
@@ -99,13 +109,33 @@ input {
 
 .content {
   padding-top: 0.2vw;
+  margin-bottom: 0.6vw;
   padding-left: 0.5vw;
   font-size: 0.9vw;
-  /* word-wrap: break-word; */
+  max-height: 42.5vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }
 
 .content span {
   color: #ffffff;
   font-family: "Menlo", "Monaco", "Courier New", monospace;
   font-weight: 400;
+}
+
+
+
+.content img {
+  height: 18vw;
+  margin: auto;
+}
+
+.expanded .content img {
+  height: 30vw;
+}
+
+.expanded .content {
+  max-height: 62.5vh;
 }
