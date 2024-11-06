@@ -112,19 +112,30 @@ const data = [
         index: "1",
         key: "Company",
         value:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+          "Ark-x is a tech-focused organization in Morocco, established in 2019 to address skill gaps in the local and regional tech sectors. With a strong focus on upskilling and reskilling initiatives designed to help close the talent gap and support Morocco's tech ecosystem.",
       },
       {
         index: "2",
         key: "Role",
         value:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+          "As an instructor and software developer at Ark-x, I mentor aspiring tech professionals in Morocco, equipping them with essential software development skills through hands-on training. In addition to teaching, I contribute to project development of tools and platforms that support our mission of advancing the local tech ecosystem. This role allows me to shape the next generation of developers while actively contributing to impactful tech solutions that drive growth and innovation.",
       },
       {
         index: "3",
         key: "Projects",
-        value:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed illo facere pariatur dicta, enim architecto magnam animi sit voluptates doloremque molestiae rerum. Aliquid, sed at. Et consequuntur quia ducimus.",
+        value: "Use arrows to navigate between projects",
+        data: [
+          {
+            title: "[Confidential]",
+            text: "A web application that uses data scraping from the web, stores the result into the database and uses AI-powered processing to extract and update data fields to generate advanced insights and statistics.",
+            image: "/data/arkx-1.png",
+          },
+          {
+            title: "Assessment App",
+            text: "A web application used to manage assessments and other candidate-related data during their journey.",
+            image: "/data/arkx-2.png",
+          },
+        ],
       },
     ],
   },
